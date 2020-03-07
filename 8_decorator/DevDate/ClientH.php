@@ -9,6 +9,7 @@ class ClientH {
     private $progLang;
     private $hardware;
     private $food;
+    private $film;
 
     public function __construct() {
         
@@ -18,6 +19,7 @@ class ClientH {
         $this->progLang = $_POST["progLang"];
         $this->hardware = $_POST["hardware"];
         $this->food = $_POST["food"];
+        $this->film = $_POST["film"];
 
         $this->hotDate = new $gender();
         $this->hotDate->setAge($age);
@@ -37,6 +39,9 @@ class ClientH {
 
         $component = new Food($component);
         $component->setFeature($this->food);
+
+        $component = new Films($component);
+        $component->setFeature($this->film);
 
         return $component;
     }
