@@ -1,4 +1,7 @@
 <?php
+ini_set('display_erros', 1);
+error_reporting(E_ALL);
+
 class Client {
 
     public function insertData() {
