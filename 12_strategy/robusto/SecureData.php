@@ -66,11 +66,11 @@ class SecureData {
 
         $this->changeField = $this->hookup->real_escape_string($_POST['update']);
         $this->oldData = $this->hookup->real_escape_string($_POST['old']);
-        $this->oldData = $this->hookup->real_escape_string($_POST['new']);
+        $this->newData = $this->hookup->real_escape_string($_POST['new']);
 
         $this->dataPack = array(
             $this->changeField,
-            $this->oldData.
+            $this->oldData,
             $this->newData
         );
 
